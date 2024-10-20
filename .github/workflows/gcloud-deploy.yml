@@ -29,6 +29,12 @@ jobs:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         export_default_credentials: true
 
+    - name: Enable necessary APIs
+      run: |
+        gcloud services enable appengine.googleapis.com
+        gcloud services enable cloudbuild.googleapis.com
+        gcloud services enable cloudresourcemanager.googleapis.com
+
     - name: Deploy to App Engine
       run: |
         echo "runtime: python39" > public/app.yaml
