@@ -45,3 +45,5 @@ theme = "syberkey-theme"
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   term = ["HTML", "RSS"]
+
+uglyURLs = false
