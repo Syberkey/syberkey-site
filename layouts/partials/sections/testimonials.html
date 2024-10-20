@@ -1,0 +1,25 @@
+<section class="py-24 bg-gray-100 text-gray-800">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">{{ .title }}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {{ range .testimonialList }}
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex items-center mb-4">
+                    {{ if .avatar }}
+                    <img src="{{ .avatar }}" alt="{{ .author }}" class="w-12 h-12 rounded-full mr-4">
+                    {{ else }}
+                    <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mr-4">
+                        <span class="text-white text-xl font-bold">{{ substr .author 0 1 }}</span>
+                    </div>
+                    {{ end }}
+                    <div>
+                        <h3 class="font-semibold">{{ .author }}</h3>
+                        <p class="text-sm text-gray-600">{{ .position }}</p>
+                    </div>
+                </div>
+                <p class="text-gray-700">{{ .content }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+<section class="hero-gradient py-20 lg:py-32 relative overflow-hidden">
+    <div class="wave-bg">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+                <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                    {{ .title | safeHTML }}
+                </h1>
+                <p class="text-lg mb-8">
+                    {{ .subtitle }}
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                    {{ range .buttons }}
+                    <a href="{{ .url }}" class="bg-{{ if eq .style "primary" }}yellow-400 text-blue-800 hover:bg-yellow-300{{ else }}transparent text-white hover:bg-white hover:text-blue-800{{ end }} font-bold py-3 px-8 rounded-full transition duration-300 text-base flex items-center justify-center border-2 border-{{ if eq .style "primary" }}yellow-400{{ else }}white{{ end }}">
+                        {{ if eq .text "Watch Demo" }}<i class="fas fa-play mr-2"></i>{{ end }}
+                        <span>{{ .text }}</span>
+                        {{ if eq .text "Get Started" }}<i class="fas fa-arrow-right ml-2"></i>{{ end }}
+                    </a>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="mt-8 md:mt-0">
+                <div class="bg-blue-900 bg-opacity-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Key Features</h3>
+                    <ul class="space-y-3">
+                        {{ range .keyFeatures }}
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-yellow-400 mr-3"></i>
+                            <span>{{ . }}</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

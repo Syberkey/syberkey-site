@@ -1,0 +1,29 @@
+<section class="py-24 {{ if eq .background "dark" }}why-choose-bg{{ else }}bg-white{{ end }} text-{{ if eq .background "dark" }}white{{ else }}gray-800{{ end }}">
+    <div class="container mx-auto px-6">
+        <div class="bg-blue-900 bg-opacity-50 rounded-lg p-8">
+            <h2 class="text-3xl font-bold text-center mb-12">{{ .title }}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <ul class="space-y-4">
+                        {{ range first 3 .reasons }}
+                        <li class="flex items-center text-base">
+                            <i class="fas fa-check-circle text-yellow-400 mr-4 text-xl"></i>
+                            <span>{{ . }}</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-4">
+                        {{ range last 3 .reasons }}
+                        <li class="flex items-center text-base">
+                            <i class="fas fa-check-circle text-yellow-400 mr-4 text-xl"></i>
+                            <span>{{ . }}</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

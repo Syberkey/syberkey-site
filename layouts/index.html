@@ -1,0 +1,17 @@
+{{ define "main" }}
+  {{ range .Params.sections }}
+    {{ if eq .type "hero" }}
+      {{ partial "sections/hero.html" . }}
+    {{ else if eq .type "featureList" }}
+      {{ partial "sections/feature-list.html" . }}
+    {{ else if eq .type "content" }}
+      {{ partial "sections/content.html" . }}
+    {{ else if eq .type "experience" }}
+      {{ partial "sections/experience.html" . }}
+    {{ else if eq .type "testimonials" }}
+      {{ partial "sections/testimonials.html" . }}
+    {{ else if eq .type "cta" }}
+      {{ partial "sections/cta.html" . }}
+    {{ end }}
+  {{ end }}
+{{ end }}

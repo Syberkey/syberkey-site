@@ -1,0 +1,23 @@
+<script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Simple parallax effect
+    window.addEventListener('scroll', function() {
+        const parallax = document.querySelectorAll('.hero-gradient, .why-choose-bg');
+        let scrollPosition = window.pageYOffset;
+        
+        parallax.forEach(background => {
+            let speed = 0.5;
+            background.style.backgroundPositionY = -(scrollPosition * speed) + 'px';
+        });
+    });
+</script>

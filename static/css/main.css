@@ -1,0 +1,46 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000814;
+    color: #ffffff;
+}
+.bg-header-blue {
+    background-color: #063279;
+}
+.text-gradient {
+    background: linear-gradient(135deg, #feb62b 0%, #fa9316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-gradient {
+    background: linear-gradient(135deg, rgba(0,31,83,0.9) 0%, rgba(0,64,128,0.9) 100%), url('/images/3409297.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.core-features-bg {
+    background-color: #001330;
+}
+.why-choose-bg {
+    background-image: linear-gradient(rgba(0,31,83,0.9), rgba(0,31,83,0.9)), url('/images/rb_37387.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.wave-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.wave-bg svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+.wave-bg .shape-fill {
+    fill: #001330;
+}
