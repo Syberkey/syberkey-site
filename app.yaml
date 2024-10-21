@@ -25,6 +25,7 @@ handlers:
   - url: /admin/config.yml
     static_files: public/admin/config.yml
     upload: public/admin/config.yml
+    mime_type: text/yaml
 
   # Serve clean URLs without .html extension (like /admin)
   - url: /(.*)
