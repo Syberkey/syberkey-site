@@ -21,8 +21,12 @@ handlers:
     static_files: public/\1/index.html
     upload: public/.*/index.html
 
-  # Catch-all for non-root URLs
-  # This serves index.html for all unmatched paths and supports client-side routing (common in SPAs)
+  # Serve clean URLs without .html (like /posts/post-1)
+  - url: /(.*)
+    static_files: public/\1.html
+    upload: public/.*.html
+
+  # Fallback handler for unmatched URLs
   - url: /.*
     static_files: public/index.html
     upload: public/index.html

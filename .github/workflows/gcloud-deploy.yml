@@ -32,9 +32,4 @@ jobs:
 
     - name: Deploy to App Engine
       run: |
-        echo "runtime: python39" > public/app.yaml
-        echo "handlers:" >> public/app.yaml
-        echo "- url: /(.*)" >> public/app.yaml
-        echo "  static_files: \1" >> public/app.yaml
-        echo "  upload: (.*)" >> public/app.yaml
-        cd public && gcloud app deploy --quiet
+        cd public && gcloud app deploy --quiet ../app.yaml
