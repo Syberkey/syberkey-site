@@ -4,10 +4,10 @@ backend:
   branch: main  # Your default branch
   auth_type: "token"
   app_id: Ov23li4ey6yO9K2wekzj  # Replace with your actual GitHub OAuth Client ID
-  base_url: "https://inspired-verve-426108-s7.ts.r.appspot.com/admin/"  # Your site's URL
+  base_url: "https://inspired-verve-426108-s7.ts.r.appspot.com"  # Your site's base URL (without /admin/)
   auth_endpoint: "https://github.com/login/oauth/authorize"
   token_endpoint: "https://github.com/login/oauth/access_token"
-  redirect_uri: "https://inspired-verve-426108-s7.ts.r.appspot.com/admin/"
+  redirect_uri: "https://inspired-verve-426108-s7.ts.r.appspot.com/admin/"  # Redirect to the admin panel after authentication
 
 media_folder: "static/images"
 public_folder: "/images"
