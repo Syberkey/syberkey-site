@@ -1,5 +1,5 @@
 # Base URL of your site
-baseURL = '/'  # Replace with your actual domain
+baseURL = 'https://inspired-verve-426108-s7.ts.r.appspot.com'  # Update this to your actual domain
 languageCode = 'en-us'
 title = 'SyberKey - Cybersecure Authentication'
 
@@ -50,7 +50,34 @@ relativeURLs = true
 
 # Output Formats for Home and Sections
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "YAML"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   term = ["HTML", "RSS"]
+
+# Add YAML media type and output format
+[mediaTypes]
+  [mediaTypes."text/yaml"]
+    suffixes = ["yml", "yaml"]
+
+[outputFormats]
+  [outputFormats.YAML]
+    mediaType = "text/yaml"
+    isPlainText = true
+    isHTML = false
+
+# Allow serving of YAML files
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^GIT_']
+  [security.http]
+    mediaTypes = ["application/x-yaml"]
+
+# Mount the admin directory
+[[module.mounts]]
+  source = "static"
+  target = "static"
+
+[[module.mounts]]
+  source = "admin"
+  target = "static/admin"
