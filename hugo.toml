@@ -1,5 +1,5 @@
 # Base URL of your site
-baseURL = 'https://syberkey.com/'  # Replace with your actual domain
+baseURL = '/'  # Replace with your actual domain
 languageCode = 'en-us'
 title = 'SyberKey - Cybersecure Authentication'
 
@@ -9,6 +9,7 @@ theme = "syberkey-theme"
 # Enable Pretty URLs (removes .html extension from URLs)
 uglyURLs = false
 canonifyURLs = true
+relativeURLs = true   
 
 # Menu Configuration
 [menu]
