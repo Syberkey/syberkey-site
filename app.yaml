@@ -16,17 +16,22 @@ handlers:
   - url: /js
     static_dir: public/js
 
-  # Serve directory URLs (like /admin/ or /posts/post-1/)
+  # Serve directory URLs (like /admin/)
   - url: /(.*)/$
     static_files: public/\1/index.html
     upload: public/.*/index.html
 
-  # Serve clean URLs without .html extension (like /admin or /posts/post-1)
+  # Serve the config.yml file from the /admin/ directory
+  - url: /admin/config.yml
+    static_files: public/admin/config.yml
+    upload: public/admin/config.yml
+
+  # Serve clean URLs without .html extension (like /admin)
   - url: /(.*)
     static_files: public/\1.html
     upload: public/.*.html
 
-  # Fallback handler for any unmatched URL to serve root index.html
+  # Fallback handler for any unmatched URL to serve index.html
   - url: /.*
     static_files: public/index.html
     upload: public/index.html
