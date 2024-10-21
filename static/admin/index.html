@@ -10,6 +10,12 @@
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script>
     CMS.registerPreviewStyle("/css/main.css");
+    fetch('/admin/config.yml')
+      .then(response => response.text())
+      .then(yaml => {
+        const config = jsyaml.load(yaml);
+        CMS.init({ config });
+      });
   </script>
 </body>
 </html>
