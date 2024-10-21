@@ -22,3 +22,8 @@ handlers:
   - url: /
     static_files: public/index.html
     upload: public/index.html
+
+  # Catch-all handler to serve index.html for any other URL
+  - url: /.*
+    static_files: public/index.html
+    upload: public/index.html
