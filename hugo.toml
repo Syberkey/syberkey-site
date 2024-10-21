@@ -1,3 +1,4 @@
+# Base URL of your site
 baseURL = 'https://syberkey.com/'  # Replace with your actual domain
 languageCode = 'en-us'
 title = 'SyberKey - Cybersecure Authentication'
@@ -5,7 +6,10 @@ title = 'SyberKey - Cybersecure Authentication'
 # Theme setting
 theme = "syberkey-theme"
 
-# Menus
+# Enable Pretty URLs (removes .html extension from URLs)
+uglyURLs = false
+
+# Menu Configuration
 [menu]
   [[menu.main]]
     name = "Home"
@@ -13,17 +17,18 @@ theme = "syberkey-theme"
     weight = 1
   [[menu.main]]
     name = "Services"
-    url = "/services"
+    url = "/services/"
     weight = 2
   [[menu.main]]
     name = "About"
-    url = "/about"
+    url = "/about/"
     weight = 3
   [[menu.main]]
     name = "Contact"
-    url = "/contact"
+    url = "/contact/"
     weight = 4
 
+# Parameters for Site Description and Social Media Links
 [params]
   description = "SyberKey offers cutting-edge biometric authentication for a cybersecure world of verification and digital signatures."
   
@@ -35,15 +40,15 @@ theme = "syberkey-theme"
   # Footer content
   footer_text = "Securing the future, one identity at a time."
 
+# Markdown Rendering Configuration
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
+# Output Formats for Home and Sections
 [outputs]
   home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
   term = ["HTML", "RSS"]
-
-uglyURLs = false
