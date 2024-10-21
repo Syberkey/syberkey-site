@@ -17,67 +17,10 @@ collections:
         name: "home"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - label: "Page Sections"
-            name: "sections"
-            widget: "list"
-            types:
-              - label: "Hero Section"
-                name: "hero"
-                widget: "object"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Subtitle", name: "subtitle", widget: "string"}
-                  - {label: "Background Image", name: "backgroundImage", widget: "image"}
-                  - label: "Buttons"
-                    name: "buttons"
-                    widget: "list"
-                    fields:
-                      - {label: "Text", name: "text", widget: "string"}
-                      - {label: "URL", name: "url", widget: "string"}
-                      - {label: "Style", name: "style", widget: "select", options: ["primary", "secondary"]}
-              - label: "Feature List"
-                name: "featureList"
-                widget: "object"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - label: "Features"
-                    name: "features"
-                    widget: "list"
-                    fields:
-                      - {label: "Icon", name: "icon", widget: "string"}
-                      - {label: "Title", name: "title", widget: "string"}
-                      - {label: "Description", name: "description", widget: "string"}
-              - label: "Content Section"
-                name: "content"
-                widget: "object"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Content", name: "content", widget: "markdown"}
-                  - {label: "Image", name: "image", widget: "image", required: false}
-                  - {label: "Image Position", name: "imagePosition", widget: "select", options: ["left", "right"], required: false}
-              - label: "Testimonial Section"
-                name: "testimonials"
-                widget: "object"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - label: "Testimonials"
-                    name: "testimonialList"
-                    widget: "list"
-                    fields:
-                      - {label: "Author", name: "author", widget: "string"}
-                      - {label: "Position", name: "position", widget: "string"}
-                      - {label: "Content", name: "content", widget: "text"}
-                      - {label: "Avatar", name: "avatar", widget: "image", required: false}
-              - label: "Call to Action"
-                name: "cta"
-                widget: "object"
-                fields:
-                  - {label: "Title", name: "title", widget: "string"}
-                  - {label: "Subtitle", name: "subtitle", widget: "string"}
-                  - {label: "Button Text", name: "buttonText", widget: "string"}
-                  - {label: "Button URL", name: "buttonUrl", widget: "string"}
-  - name: "site_settings"
-    label: "Site Settings"
+          - {label: "Content", name: "content", widget: "markdown"}
+
+  - name: "settings"
+    label: "Settings"
     files:
       - file: "data/contact.yml"
         label: "Contact Information"
