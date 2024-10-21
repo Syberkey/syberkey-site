@@ -8,6 +8,7 @@ theme = "syberkey-theme"
 
 # Enable Pretty URLs (removes .html extension from URLs)
 uglyURLs = false
+canonifyURLs = true
 
 # Menu Configuration
 [menu]

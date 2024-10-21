@@ -1,10 +1,26 @@
 runtime: python39
 
 handlers:
-- url: /
-  static_files: public/index.html
-  upload: public/index.html
+  # Serve the root index.html for the home page
+  - url: /
+    static_files: public/index.html
+    upload: public/index.html
 
-- url: /(.*)
-  static_files: public/\1
-  upload: public/(.*)
+  # Serve static assets (images, CSS, JS, etc.)
+  - url: /images
+    static_dir: public/images
+
+  - url: /static
+    static_dir: public/static
+
+  # Serve clean URLs for any path and fallback to index.html for other paths
+  - url: /(.*)
+    static_files: public/\1
+    upload: public/(.*)
+    application_readable: true
+
+  # Fallback handler for any unmatched URL to serve index.html (useful for SPAs)
+  - url: /.*
+    static_files: public/index.html
+    upload: public/index.html
+    application_readable: true
