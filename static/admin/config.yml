@@ -2,11 +2,8 @@ backend:
   name: github
   repo: Syberkey/syberkey-site
   branch: main
-  base_url: https://inspired-verve-426108-s7.ts.r.appspot.com
+  base_url: https://oauth-service-dot-inspired-verve-426108-s7.ts.r.appspot.com
   auth_endpoint: auth
-  app_id: Ov23li4ey6yO9K2wekzj
-  callback_url: https://inspired-verve-426108-s7.ts.r.appspot.com/admin
-
 
 media_folder: "static/images"
 public_folder: "/images"
