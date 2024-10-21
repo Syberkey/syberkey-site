@@ -66,12 +66,14 @@ relativeURLs = true
     isPlainText = true
     isHTML = false
 
-[outputs]
-  home = ["HTML", "RSS", "YAML"]
+# Allow serving of YAML files
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^GIT_']
+  [security.http]
+    mediaTypes = ["application/x-yaml"]
 
-[security.http]
-  mediaTypes = ["text/yaml"]
-
+# Mount the admin directory
 [[module.mounts]]
   source = "static"
   target = "static"
@@ -79,9 +81,3 @@ relativeURLs = true
 [[module.mounts]]
   source = "admin"
   target = "static/admin"
-
-[server]
-  [[server.headers]]
-    for = "/admin/config.yml"
-    [server.headers.values]
-      Content-Type = "text/yaml"
