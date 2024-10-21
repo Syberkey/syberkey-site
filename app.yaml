@@ -10,16 +10,24 @@ handlers:
   - url: /images
     static_dir: public/images
 
-  - url: /static
-    static_dir: public/static
+  - url: /css
+    static_dir: public/css
 
-  # Serve clean URLs for any path and fallback to index.html for other paths
+  - url: /js
+    static_dir: public/js
+
+  # Serve directory URLs (like /posts/post-1/)
+  - url: /(.*)/$
+    static_files: public/\1/index.html
+    upload: public/.*/index.html
+
+  # Serve clean URLs without .html (like /posts/post-1)
   - url: /(.*)
-    static_files: public/\1
-    upload: public/(.*)
-    application_readable: true
+    static_files: public/\1.html
+    upload: public/.*.html
 
-  # Fallback handler for any unmatched URL to serve index.html (useful for SPAs)
+  # Fallback handler for any unmatched URL to serve the root index.html
+  # This will catch all unmatched routes (useful for Single Page Apps or general routing)
   - url: /.*
     static_files: public/index.html
     upload: public/index.html
