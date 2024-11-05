@@ -2,8 +2,8 @@
 title: "SyberKey - Cybersecure Authentication"
 sections:
   - type: hero
-    title: "Revolutionizing <br><span class='text-gradient'>Digital Security</span>"
-    subtitle: "SyberKey offers cutting-edge biometric authentication for a cybersecure world of verification and digital signatures."
+    title: "Revolutionizing <br><span class='text-gradient'>Digital Security</span> with Patent Pending Technology"
+    subtitle: "SyberKey/OneBioId offers cutting-edge Decentralized Remote Biometric Authentication for a cybersecure world of Data Protection, Identify and access Management (IAM), Passwordless verification and digital Bio signatures."
     backgroundImage: "/images/hero-bg.jpg"
     buttons:
       - text: "Get Started"
@@ -14,28 +14,28 @@ sections:
         style: "secondary"
     keyFeatures:
       - "One ID for all systems"
-      - "Biometric-secured password"
-      - "Advanced encryption"
+      - "Biometric-secured to enable Truly One Password"
+      - "Advanced Triple encryption"
       - "24/7 monitoring"
 
   - type: featureList
     title: "Our Core Features"
-    features:
+    features:    
       - icon: "fingerprint"
-        title: "One ID"
+        title: "One Bio ID"
         description: "Access multiple systems with a single, secure biometric identifier."
       - icon: "key"
         title: "One Password"
-        description: "Simplify your digital life with a single, biometric-secured password."
+        description: "Simplify your digital life with a single, biometric-secured password. Truly a Single Password that can't be stolen or shared."
       - icon: "shield-alt"
         title: "SyberKey"
-        description: "Our unique technology for unparalleled cybersecurity in authentication."
+        description: "Our unique technology for unparalleled cybersecurity in Data Protection and Access Management"
 
   - type: content
     title: "Why Choose SyberKey?"
     background: "dark"
     reasons:
-      - "Advanced biometric authentication"
+      - "Advanced Novel biometric authentication"
       - "Seamless integration with existing systems"
       - "Enhanced security for digital signatures"
       - "Reduced risk of identity theft"
