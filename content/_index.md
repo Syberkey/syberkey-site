@@ -3,7 +3,7 @@ title: "SyberKey - Cybersecure Authentication"
 sections:
   - type: hero
     title: "Revolutionizing <br><span class='text-gradient'>Digital Security</span> with Patent Pending Technology"
-    subtitle: "SyberKey/OneBioId offers cutting-edge Decentralized Remote Biometric Authentication for a cybersecure world of Data Protection, Identify and access Management (IAM), Passwordless verification and digital Bio signatures."
+    subtitle: "SyberKey/OneBioID offers cutting-edge Decentralized Remote Biometric Authentication for a cybersecure world of Data Protection, Identify and access Management (IAM), Passwordless verification and digital Bio signatures."
     backgroundImage: "/images/hero-bg.jpg"
     buttons:
       - text: "Get Started"
